@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title> Withdraw</title>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <p><br> To Withdraw Enter Phone Number & Scan</p>
+        <br>
+        <input type="text"placeholder="Enter Your Phone Number" id="qrText">
+        <input type="text"placeholder="Enter Amount">
+        <div id="imgBox">
+            <img src=""id="qrImage">  
+        </div>
+        <button onclick="generateQR()">Withdraw</button>
+    </div>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="menu">
+        <ul>
+            <li> <a href="index.html"><code> 💠Home</code></a> </li>
+            <li> <a href="login&signup.html"><code> 💠Login</code></a> </li>
+            <li> <a href="login&signup.html"><code>💠Signup</code> </a> </li>
+        </ul> 
+      </div>
+  
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<main> 
+      <p class="copyright">
+        &copy; 2023<span> Meta Trade </span> All Rights Reserved.
+      </p>
+
+    </main>
+
+    <style>* {
+        margin:10;
+        padding:0;
+        font-family:'poppins',sans-serif;
+        box-sizing:border-box;
+        justify-content: left;
+    }
+    body{
+    background-color: black;
+        background-position: top;
+        left: 50px;
+   
+  
+    }
+    
+    .container {
+        width:400px;
+        padding: 20px;
+        top:50%;
+        left:50%
+        transform;translate: (-50%,-50%);
+        border-radius:10px;
+        color:blue;
+        justify-content: center;
+        align-items:center ;
+        
+
+        
+        
+    }
+    
+    .container p {
+    font-weight: 600%;
+    font-size: 15px;
+    margin-bottom:8px;
+    color:red;
+    
+    }
+    .container input{
+        width:80%;
+        height:50px;
+        background-color:transparent;
+        border:1px solid lime;
+        color: yellow;
+        outline: 0;
+        padding: 10px;
+        margin:10px 0 20px;
+        border-radius:5px;
+         
+
+        
+    }
+    .container button {
+        width: 80%;
+        height:50px;
+        background: lime;
+        color:black;
+        border-radius:5px;
+        box-shadow: 0 10px 10px ;
+        cursor:pointer;
+        margin:20px 0;
+        font-weight: 500; 
+         
+
+
+        
+    }
+    
+    #ImgBox {
+        width: 200px;
+        border: radius 5px;
+        azimuth: height 0;
+        overflow:hidden;
+        transition: max-height 2s;
+    }
+    
+    #ImgBox img {
+        width:100%;
+        padding: 10px;;
+    
+    }
+    #ImgBox.show-img{
+        max-height: 300px;
+        margin:10px auto;
+    }
+
+    .menu {
+width: 100px;
+float: left;
+height:90px;
+
+}
+ul {
+float:left ;
+display:flex;
+justify-content:center ;
+align-items:center;
+}
+ul li {
+list-style: none;
+margin-left: 20px;
+margin-top: 20px;
+font-size: 15px;
+color: lime;
+}
+ul li a {
+text-decoration: none;
+color:cyan;
+font-family: Arial;
+font-weight: bold;
+transition: 0s ;
+
+}
+ul li a:hover{
+color:orangered;
+}  
+
+main {
+  flex: 100%;
+  padding: 2rem;
+  color:orange;
+  display: flex;
+  flex-direction: column;
+   
+}
+
+main h1 {
+  margin-bottom: 1rem;
+}
+
+main .copyright {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+main .copyright span {
+  color: cyan;
+  font-weight: 500;
+  cursor: pointer;
+}
+   /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+} 
+    </style>
+    <script>
+        let imgBox=document.getElementById("imgBox");
+        let qrImage=document.getElementById("qrImage");
+        let qrText=document.getElementById("qrText");
+
+        function generateQR(){
+            qrImage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+            imgBox.classList.add("show-img")
+        }
+
+
+    </script>
+    
+</body>
+</html>
